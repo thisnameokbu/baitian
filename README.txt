@@ -1,2 +1,3 @@
-Git is a distributed version control system.
-Git is free software.
+学习用github做网站
+加油！
+
