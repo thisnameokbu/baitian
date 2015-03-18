@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="shotcut icon" href="img/favicon.ico">
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Le styles -->
+	 <link href="http://apps.bdimg.com/libs/bootstrap/2.3.2/css/bootstrap-responsive.min.css" rel="stylesheet">
+	 <link href="http://apps.bdimg.com/libs/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+	<title>BT</title>
+	<style type="text/css">
+		.item img{
+			width: 100%;
+			height: 600px;
+		}
+	</style>
+	
+</head>
+<body>
+	<!--navbar
+	===========================================================-->
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+			          <a class="brand pull-left" href="index.html">BT</a>
+			          <div class="nav-pills pull-left">
+			            <ul class="nav ">
+			              <li class="active">
+			                <a href="index.html">首页</a>
+			              </li>
+			              <li class="">
+			                <a href="fog.html">迷雾</a>
+			              </li>
+			              <li class="">
+			                <a href="beauty.html">花草</a>
+			              </li>
+			              <li class="">
+			                <a href="contact.html">与我们联系</a>
+			              </li>            
+			            </ul>
+			          </div>
+			          <form class="navbar-search pull-right" name="search_form" target="_blank" onsubmit="return gowhere1(this)">        
+			          		<input name=tn type=hidden>     
+				            <input type="text" placeholder="baidu" class="search-query" id="word" name="word">
+				            <input type="submit" class="btn btn-info" value="百度一下" id="try">
+			          </form> 
+			            
+			</div>
+		</div>
+	</div>
+
+	<!--header
+	===========================================================-->
+	<div class="well">
+		  <header class="" id="" style="margin:45px 0 0 0;">
+		      <div class="container">    
+		          <div class="pull-left" data-placement="rigth" title="This is my logo"><a href="index.html"><img class="img-rounded"  src="img/logo-new.PNG" style="width:200px;height:50px"></a></div>
+		          <div class="pull-right"> <h3>Love to the end !</h3></div>
+		      </div>
+		  </header>
+	</div>
+
+	<!--carousel
+	===========================================================-->
+	<div class="container">
+		<div id="carousel_box" class="carousel slide"  >
+			<!--indicators-->
+			<ol class="carousel-indicators pull-left">
+				<li data-target="#carousel_box" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel_box" data-slide-to="1"></li>
+				<li data-target="#carousel_box" data-slide-to="2"></li>
+			</ol>
+			<!--inner
+			==========================================-->			
+			<div class="carousel-inner">
+				<!--first pic-->
+				<div class="item active">
+					<a href="fog.html">
+						<img src="http://img.beelink.com/201402/139244344898207.jpg" alt="in the fog">
+					</a>
+					<div class="carousel-caption">
+						<div class="slide-col2">
+							<h2>I am lost in the fog</h2>
+							<div class="row"><p class="pull-right">在迷雾中我们都迷路了</p></div>
+						</div>
+					</div>
+				</div>
+				<!--second pic-->
+				<div class="item">
+					<a href="beauty.html">
+						<img src="http://img5.duitang.com/uploads/item/201306/05/20130605110326_rtytK.thumb.700_0.jpeg" alt="beautiful sence!">
+					</a>
+					<div class="carousel-caption">
+						<div class="slide-col2">
+							<h2>We need a breath of fresh air!</h2>
+							<div class="row"><p class="pull-right">我需要呼吸一下新鲜的空气</p></div>
+						</div>
+					</div>
+				</div>
+				<!--third pic-->
+				<div class="item">
+					<a href="contact.html">
+						<img src="http://baike.zhige.net/uploads/201007/1278467194PsbMeIY7.jpg" alt="contact with us">
+					</a>
+					<div class="carousel-caption">
+						<div class="slide-col2">
+							<h2>Please contact with us!</h2>
+							<div class="row"><p class="pull-right">来自哈工程的问候</p></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--prev&next-->
+			<a href="#carousel_box" class="left carousel-control" data-slide="prev">&lsaquo;</a>
+			<a href="#carousel_box" class="right carousel-control" data-slide="next">&rsaquo;</a>
+		</div>
+	</div>
+
+	<!--footer
+	===========================================================-->
+	<footer>
+		<div class="copyright text-center">
+			<p>本网站只是为了学习，如有侵权，请及时与我们联系</p>
+			<p>Email: chenzy@126.com</p>
+		</div>
+	</footer>
+
+
+
+
+	<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    	<script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+    	<!--make baidu come ture-->
+    	<script src="js/dz.js"></script>
+    	
+    	
+</body>
+</html>
