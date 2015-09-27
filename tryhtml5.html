@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>BT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shotcut icon" href="img/favicon.ico">
+
+     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Le styles -->
+    <link href="http://apps.bdimg.com/libs/bootstrap/2.3.2/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="http://apps.bdimg.com/libs/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <script type="text/javascript" src="js/app.js"></script>
+    <style type="text/css">
+    body{font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;}
+    .t_area{
+		width:600px; 
+		overflow-y:visible 
+    }
+    .box{width: 630px; height: 630px;}
+    #box1{background-color: #cccccc;}
+    .imgcontainer{width:630px; height: 630px; background-color: #aaaaaa}
+    </style>
+    <script type="text/javascript">
+    function playPause()
+    {
+      var myAudio = document.getElementById('audio');//很诡异的是：当把这条语句放到function外面，就不好使了
+      if(myAudio.paused){myAudio.play();} 
+      else{myAudio.pause();}     
+    }
+
+    function makeBigger()
+    {
+      var myVideo = document.getElementById('video');
+      myVideo.width=600;
+    }
+
+    function makeSmaller()
+    {
+      var myVideo = document.getElementById('video');
+      myVideo.width=420;
+    }
+    </script>
+</head>
+<body data-spy="scroll" data-target="#side-nav">
+	<!--navbar
+	===========================================================-->
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+			          <a class="brand pull-left" href="index.html">BT</a>
+			          <div class="nav-pills pull-left">
+			            <ul class="nav ">
+			              <li class="">
+			                <a href="index.html">首页</a>
+			              </li>
+			              <li class="">
+			                <a href="fog.html">迷雾</a>
+			              </li>
+			              <li class="">
+			                <a href="beauty.html">花草</a>
+			              </li>
+			              <li class="">
+			                <a href="contact.html">与我们联系</a>
+			              </li>  
+			              <li clas="active">
+			              	<a href="tryhtml5.html">html5小试牛刀</a>
+			              </li>          
+			            </ul>
+			          </div>
+			          <form class="navbar-search pull-right" name="search_form" target="_blank" onsubmit="return gowhere1(this)">        
+			          		<input name=tn type=hidden>     
+				            <input type="text" placeholder="baidu" class="search-query" id="word" name="word">
+				            <input type="submit" class="btn btn-info" value="百度一下" id="try">
+			          </form> 
+			            
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+  <div class="container">
+
+    <!-- Side nav
+    ================================================== -->
+    <div class="row">
+      <div class="span3 " id="side-nav">
+        <ul class="nav nav-tabs nav-pills nav-stacked pull-left" data-spy="affix">          
+          <li class="active"><a href="#Part1"><i class="icon-chevron-right"></i>line1</a></li>          
+          <li class=""><a href="#Part2"><i class="icon-chevron-right"></i>line2</a></li>          
+          <li class=""><a href="#Part3"><i class="icon-chevron-right"></i>line3</a></li>          
+          <li class=""><a href="#Part4"><i class="icon-chevron-right"></i>line4</a></li>          
+          <li class=""><a href="#Part5"><i class="icon-chevron-right"></i>line5</a></li>         
+        </ul>
+      </div>
+      
+      <div class="span9">
+
+
+
+        <!-- Part1 settings
+        ================================================== -->
+        <section id="Part1" class="hero-unit">
+        	
+        	<h2>video</h2>
+        	<div style="text-align:center">
+        		<video controls="controls" src="video/mov_bbb.ogg" id="video" width="420" style="margin-top:15px"></video><br>
+            <button onclick="makeBigger()">放大</button>
+            <button onclick="makeSmaller()">缩小</button>
+        	</div>
+
+        	<h2>音频audio</h2>
+          <div style="text-align:center">
+			     <audio id="audio" src="video/mov_bbb.ogg" loop="loop" controls="controls">您的浏览器不支持</audio><br>
+           <button onclick="playPause()">播放/暂停</button>
+          </div>
+        </section>
+
+
+
+
+        <!--Part2
+        ================================================== -->
+        <section id="Part2" class="hero-unit">
+            <h2> 拖放drag和drop(欧巴，请把小马儿拖到这个小灰框尼^_^)</h2>
+            <div id="box1" class="box"></div>
+            <img id='img1' src="img/horse.jpg">
+            <div id="msg"></div>
+        </section>
+
+
+
+        <!-- Part3
+        ================================================== -->
+         <section id="Part3" class="hero-unit">
+            <h2> 欧巴，请把本地的某照片拖拽到此处</h2>
+            <div id="imgcontainer" class="imgcontainer">
+            </div>
+        </section>
+
+
+
+        <!-- Part4
+        ================================================== -->
+         <section id="Part4" class="hero-unit">
+            <h2> 画布</h2>
+            <button onclick="test1()">试试这个~</button> 
+            <button onclick="test2()">嘿嘿，再试试这个~</button>
+            <button onclick="test3()">try again</button><br/>
+            <canvas id="myCanvas1" width="200" height="100"></canvas><br/> 
+            <canvas id="myCanvas2" width="200" height="100"></canvas><br/>
+            <canvas id="myCanvas3" width="200" height="100"></canvas><br/>
+            <script type="text/javascript">
+            function test1(){
+              var c=document.getElementById("myCanvas1");
+              var cxt=c.getContext("2d");
+              cxt.fillStyle="#FF0000";
+              cxt.fillRect(0,0,150,75);              
+            }
+
+            function test2(){
+              var c=document.getElementById('myCanvas2');
+              var ctx=c.getContext('2d');
+              ctx.moveTo(10,10);
+              ctx.lineTo(150,150);
+              ctx.lineTo(10,150);
+              ctx.stroke();
+            }
+
+            function test3(){
+              var c=document.getElementById('myCanvas3');
+              var ctx=c.getContext('2d');
+              ctx.fillStyle="#FF0000";
+              ctx.beginPath();
+              ctx.arc(70,18,15,0,Math.PI*2,true);
+              ctx.closePath();
+              ctx.fill();
+            }
+            </script>
+        </section>
+
+
+
+        <!-- Part5
+        ================================================== -->
+         <section id="Part5" class="hero-unit">
+            <h1>Part 5</h1>
+           	<h2> part5.1</h2>
+            <p>xxxxxx</p>
+        </section>
+
+       
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
